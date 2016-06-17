@@ -503,9 +503,13 @@ static NSString *kiTunesMetadataFileName            = @"iTunesMetadata";
         [arguments addObject:@"--no-strict"]; // http://stackoverflow.com/a/26204757
     }
     
-    if (![[entitlementField stringValue] isEqualToString:@""]) {
+    // Do not add "--entitlements" argument when siging frameworks
+    if (![[entitlementField stringValue] isEqualToString:@""] &&
+        ![filePath.pathExtension isEqualToString:@"framework"])
+    {
         [arguments addObject:[NSString stringWithFormat:@"--entitlements=%@", [entitlementField stringValue]]];
     }
+
     
     [arguments addObjectsFromArray:[NSArray arrayWithObjects:filePath, nil]];
     
