@@ -276,6 +276,7 @@
 				GCC_PREFIX_HEADER = "iReSign/iReSign-Prefix.pch";
 				INFOPLIST_FILE = "iReSign/iReSign-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anfema.iReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -294,7 +295,9 @@
 				GCC_PREFIX_HEADER = "iReSign/iReSign-Prefix.pch";
 				INFOPLIST_FILE = "iReSign/iReSign-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anfema.iReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
